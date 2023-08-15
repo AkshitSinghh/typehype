@@ -1,0 +1,25 @@
+{
+  "name": "typo-meter",
+  "version": "1.0.0",
+  "description": "this is a test project",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshit4892/Typo-meter.git"
+  },
+  "author": "Akshit singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshit4892/Typo-meter/issues"
+  },
+  "homepage": "https://github.com/akshit4892/Typo-meter#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
