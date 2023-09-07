@@ -5,6 +5,17 @@
   padding: 1rem 0 1.8rem 0;
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: bolder;
+
+  svg {
+    fill: #0f969c;
+    transform: scale(1.2);
+
+    &:hover {
+      filter: drop-shadow(0px 0px 6px #1bcdd6b2);
+      fill: #1bcdd6;
+      cursor: pointer;
+    }
+  }
 }
 
 .slideOut-footer {
