@@ -2,10 +2,19 @@
   text-align: center;
   font-family: "Signika", sans-serif;
   font-weight: lighter;
-  font-size: 1.8rem;
-  margin: 6rem 5rem 0 5rem;
+  font-size: 1.6rem;
+  margin: 1rem 5rem 0 5rem;
 
   &_input {
     opacity: 0;
   }
+}
+
+.zoom {
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+.space {
+  padding: 0 0.1rem 0 0.1rem;
 }

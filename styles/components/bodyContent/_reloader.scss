@@ -8,12 +8,17 @@
     margin-right: auto;
     background-color: transparent;
     border: none;
-    transform: scale(1.5);
+    transform: scale(2);
+
+    svg {
+      fill: #0f969c;
+    }
 
     &:hover {
       cursor: pointer;
       svg {
         animation: rotate 0.8s 1;
+        fill: #1cdfe9;
       }
     }
 

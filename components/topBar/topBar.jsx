@@ -1,8 +1,12 @@
 import "../../styles/index.scss";
 
-const TopBar = () => {
+const TopBar = ({ slideAnimation }) => {
   return (
-    <div className="topbar">
+    <div
+      className={`topbar ${
+        slideAnimation ? "slideOut-topbar" : "slideIn-topbar"
+      }`}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="1em"

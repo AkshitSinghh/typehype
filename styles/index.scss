@@ -20,16 +20,24 @@ body {
   font-size: 62.5%;
   margin: 0 20rem 0 20rem;
   padding: 0;
+  background-color: #030c0e;
+  overflow: hidden;
 }
 
-.red {
-  color: red;
+.incorrect {
+  color: rgba(255, 0, 0, 0.856);
+  text-shadow: 1px 1px 2rem rgba(255, 0, 0, 0.651);
 }
 
-.green {
-  color: greenyellow;
+.correct {
+  color: #1ae6f1de;
+  text-shadow: 1px 1px 2rem #1ae6f180;
 }
 
 .letter {
   color: gray;
+}
+
+.space-error {
+  border-bottom: 0.5px solid rgba(255, 0, 0, 0.856);
 }

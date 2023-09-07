@@ -6,7 +6,13 @@ import "../../../styles/index.scss";
 import Results from "../../results";
 import Reloader from "../reloader";
 
-const WordSheet = ({ data, wordCount, database, setData }) => {
+const WordSheet = ({
+  data,
+  wordCount,
+  database,
+  setData,
+  setSlideAnimation,
+}) => {
   const [classValue, setClassValue] = useState(
     Array(data.length).fill("letter")
   );
@@ -26,6 +32,14 @@ const WordSheet = ({ data, wordCount, database, setData }) => {
     setCountDownTime(totalTime);
     setShowResultPage(false);
   }, [data]);
+
+  useEffect(() => {
+    if (startTimmer) {
+      setSlideAnimation(true);
+    } else {
+      setSlideAnimation(false);
+    }
+  }, [startTimmer]);
 
   const changeState = (event) => {
     if (
@@ -64,17 +78,22 @@ const WordSheet = ({ data, wordCount, database, setData }) => {
         </div>
       ) : (
         <>
-          <div className="wordContainer">
-            <Timer
-              startTimmer={startTimmer}
-              setShowResultPage={setShowResultPage}
-              setStartTimer={setStartTimer}
-              countdownTime={countdownTime}
-              setCountDownTime={setCountDownTime}
-            />
+          <Timer
+            startTimmer={startTimmer}
+            setShowResultPage={setShowResultPage}
+            setStartTimer={setStartTimer}
+            countdownTime={countdownTime}
+            setCountDownTime={setCountDownTime}
+          />
+          <div className={`wordContainer ${startTimmer ? "zoom" : ""} `}>
             {data?.split("")?.map((letter, letterIndex) => {
               return (
-                <span className={`${classValue[letterIndex]}`} key={uuidv4()}>
+                <span
+                  className={`${classValue[letterIndex]} ${
+                    letter == " " ? "space" : ""
+                  }`}
+                  key={uuidv4()}
+                >
                   {letter.toLowerCase()}
                 </span>
               );

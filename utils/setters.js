@@ -1,12 +1,10 @@
-export const totalWords = 45;
+import data from "./english.json";
+
+export const totalWords = 60;
 export const totalTime = 30;
 
 export const fetchData = async (setDatabase) => {
-  const jsonData = await fetch(
-    "https://raw.githubusercontent.com/monkeytypegame/monkeytype/master/frontend/static/languages/english_10k.json"
-  );
-  const database = await jsonData.json();
-  setDatabase(database.words);
+  setDatabase(data.words);
 };
 
 export const setWords = (wordCount, database) => {
@@ -40,10 +38,12 @@ export const setInput = (
   setCorrectCount,
   correctCount
 ) => {
-  if (input?.toLowerCase() == data[counter]?.toLowerCase()) {
+  if (data[counter] == " " && input != data[counter]) {
+    setClassValue(setColor("space-error", classValue, counter));
+  } else if (input?.toLowerCase() == data[counter]?.toLowerCase()) {
     setCorrectCount(correctCount + 1);
-    setClassValue(setColor("green", classValue, counter));
+    setClassValue(setColor("correct", classValue, counter));
   } else {
-    setClassValue(setColor("red", classValue, counter));
+    setClassValue(setColor("incorrect", classValue, counter));
   }
 };

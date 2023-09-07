@@ -1,7 +1,13 @@
-const Footer = () => {
+const Footer = ({ slideAnimation }) => {
   return (
     <>
-      <div className="footer">Footer</div>
+      <div
+        className={`footer ${
+          slideAnimation ? "slideOut-footer" : "slideIn-footer"
+        }`}
+      >
+        Footer
+      </div>
     </>
   );
 };

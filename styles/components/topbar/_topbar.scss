@@ -1,12 +1,24 @@
 .topbar {
+  color: #0f969c;
   display: flex;
   font-size: 2rem;
-  padding: 1rem 0 1rem 0;
+  padding: 1.8rem 0 1rem 0;
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: bolder;
 
   &_icon {
     transform: scale(2) translate(0, 1);
     width: 10rem;
+    fill: #0f969c;
   }
+}
+
+.slideOut-topbar {
+  transform: translate(0, -100);
+  transition: 1s;
+}
+
+.slideIn-topbar {
+  transform: translate(0, 0);
+  transition: 1s;
 }
