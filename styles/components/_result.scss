@@ -1,0 +1,19 @@
+.words-per-min,
+.error {
+  font-size: 4rem;
+  font-family: "Signika", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  flex-grow: 1;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.results-container {
+  display: flex;
+  margin-top: 12rem;
+}
