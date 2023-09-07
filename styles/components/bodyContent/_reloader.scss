@@ -1,0 +1,29 @@
+.reloader {
+  &-container {
+    text-align: center;
+    padding: 4rem;
+  }
+
+  &-button {
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
+    transform: scale(1.5);
+
+    &:hover {
+      cursor: pointer;
+      svg {
+        animation: rotate 0.8s 1;
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

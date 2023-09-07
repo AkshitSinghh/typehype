@@ -1,0 +1,12 @@
+.topbar {
+  display: flex;
+  font-size: 2rem;
+  padding: 1rem 0 1rem 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: bolder;
+
+  &_icon {
+    transform: scale(2) translate(0, 1);
+    width: 10rem;
+  }
+}
