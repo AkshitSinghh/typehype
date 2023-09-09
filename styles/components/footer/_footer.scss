@@ -5,6 +5,7 @@
   padding: 1rem 0 1.8rem 1.5rem;
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: bolder;
+  margin: 0 15rem 0 15rem;
 
   svg {
     fill: #0f969c;
@@ -19,11 +20,31 @@
 }
 
 .slideOut-footer {
-  transform: translate(0, +100);
-  transition: 1s;
+  animation: fadeout 1s 1;
+  animation-fill-mode: forwards;
 }
 
 .slideIn-footer {
-  transform: translate(0, 0);
-  transition: 1s;
+  animation: fadein 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, +100);
+    display: none;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    transform: translate(0, +100);
+    display: none;
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
