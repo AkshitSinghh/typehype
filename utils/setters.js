@@ -23,9 +23,10 @@ export const setWords = (wordCount, database) => {
   return sentence;
 };
 
-export const setColor = (color, classValue, index) => {
+export const setColor = (color, classValue, counter) => {
   let updatedClassValue = [...classValue];
-  updatedClassValue[index] = color;
+  updatedClassValue[counter] = color;
+
   return updatedClassValue;
 };
 

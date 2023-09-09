@@ -18,3 +18,20 @@
 .space {
   padding: 0 0.1rem 0 0.1rem;
 }
+
+.setWidth {
+  padding: 0 0.02rem 0 0;
+}
+
+.cursor {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #1ae6f1de;
+  }
+  100% {
+    background-color: #1ae6f100;
+  }
+}

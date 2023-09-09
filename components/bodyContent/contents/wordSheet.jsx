@@ -94,6 +94,11 @@ const WordSheet = ({
                   }`}
                   key={uuidv4()}
                 >
+                  <span
+                    className={`setWidth ${
+                      letterIndex == counter ? "cursor" : ""
+                    }`}
+                  ></span>
                   {letter.toLowerCase()}
                 </span>
               );
