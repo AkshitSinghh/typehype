@@ -18,10 +18,9 @@
 
 body {
   font-size: 62.5%;
-  margin: 0 20rem 0 20rem;
+  margin: 0;
   padding: 0;
   background-color: #030c0e;
-  overflow: hidden;
 }
 
 .incorrect {
@@ -40,4 +39,8 @@ body {
 
 .space-error {
   border-bottom: 0.5px solid rgba(255, 0, 0, 0.856);
+}
+
+.application_wrapper {
+  overflow: hidden;
 }

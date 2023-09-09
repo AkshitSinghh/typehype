@@ -5,6 +5,7 @@
   padding: 1.8rem 0 1rem 0;
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: bolder;
+  margin: 0 15rem 0 15rem;
 
   &_icon {
     transform: scale(2) translate(0, 1);
@@ -14,11 +15,29 @@
 }
 
 .slideOut-topbar {
-  transform: translate(0, -100);
-  transition: 1s;
+  animation: fadeouttopbar 1s 1;
+  animation-fill-mode: forwards;
 }
 
 .slideIn-topbar {
-  transform: translate(0, 0);
-  transition: 1s;
+  animation: fadeintopbar 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeouttopbar {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100);
+  }
+}
+
+@keyframes fadeintopbar {
+  0% {
+    transform: translate(0, -100);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
