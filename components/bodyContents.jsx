@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Shimmer from "./bodyContent/shimmer";
 import WordSheet from "./bodyContent/contents/wordSheet";
 import { fetchData, setWords, totalWords } from "../utils/setters";
 
@@ -18,19 +17,13 @@ const BodyContents = ({ setSlideAnimation }) => {
 
   return (
     <div className="content_wrapper">
-      {data.length ? (
-        <div>
-          <WordSheet
-            data={data}
-            wordCount={wordCount}
-            database={database}
-            setData={setData}
-            setSlideAnimation={setSlideAnimation}
-          />
-        </div>
-      ) : (
-        <Shimmer />
-      )}
+      <WordSheet
+        data={data}
+        wordCount={wordCount}
+        database={database}
+        setData={setData}
+        setSlideAnimation={setSlideAnimation}
+      />
     </div>
   );
 };

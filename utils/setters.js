@@ -4,10 +4,6 @@ export const totalWords = 60;
 export const totalTime = 15;
 
 export const fetchData = async (setDatabase) => {
-  const response = await fetch(
-    "https://raw.githubusercontent.com/monkeytypegame/monkeytype/master/frontend/static/languages/english_1k.json"
-  );
-  const data = await response.json();
   setDatabase(data.words);
 };
 
