@@ -1,20 +1,19 @@
 .words-per-min,
 .error {
-  color: #0c7075;
-  font-size: 4rem;
+  color: #0f969c;
+  font-size: 3rem;
   font-family: "Signika", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
   flex-grow: 1;
 }
 
 .description {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .results-container {
   display: flex;
-  margin-top: 12rem;
+  margin: 3.5rem 25rem 0 25rem;
 }
