@@ -1,7 +1,7 @@
 import data from "./english.json";
 
 export const totalWords = 60;
-export const totalTime = 15;
+export const totalTime = 30;
 
 export const fetchData = async (setDatabase) => {
   setDatabase(data.words);
